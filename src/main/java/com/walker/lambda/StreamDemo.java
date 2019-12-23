@@ -1,5 +1,8 @@
 package com.walker.lambda;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -10,41 +13,12 @@ import java.util.stream.Collectors;
  * @date 2019/5/18
  */
 public class StreamDemo {
+
+    @Data
+    @AllArgsConstructor
     static class Student {
         private String name;
         private double score;
-
-        public Student() {
-        }
-
-        public Student(String name, double score) {
-            this.name = name;
-            this.score = score;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public double getScore() {
-            return score;
-        }
-
-        public void setScore(double score) {
-            this.score = score;
-        }
-
-        @Override
-        public String toString() {
-            return "Student{" +
-                    "name='" + name + '\'' +
-                    ", score=" + score +
-                    '}';
-        }
     }
 
     public static void main(String[] args) {

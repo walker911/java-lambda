@@ -1,6 +1,8 @@
 package com.walker.lambda;
 
 import com.alibaba.fastjson.JSON;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,33 +17,11 @@ import java.util.function.Predicate;
  * @date 2019/5/17
  */
 public class LambdaDemo {
+    @Data
+    @AllArgsConstructor
     static class Student {
         private String name;
         private double score;
-
-        public Student() {
-        }
-
-        public Student(String name, double score) {
-            this.name = name;
-            this.score = score;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public double getScore() {
-            return score;
-        }
-
-        public void setScore(double score) {
-            this.score = score;
-        }
     }
 
     public static void main(String[] args) {
