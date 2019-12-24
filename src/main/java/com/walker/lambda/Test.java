@@ -1,7 +1,6 @@
 package com.walker.lambda;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.stream.Stream;
 
 /**
  * @author walker
@@ -9,8 +8,6 @@ import java.util.concurrent.Executors;
  */
 public class Test {
     public static void main(String[] args) {
-        String msg = "hello";
-        ExecutorService executor = Executors.newFixedThreadPool(5);
-        executor.submit(() -> System.out.println(msg));
+        Stream.iterate(1, t -> t + 2).limit(100).forEach(System.out::println);
     }
 }
